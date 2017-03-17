@@ -63,12 +63,9 @@ public class Atm {
 			}
 		}
 		if (currentCard.moneyOut(money)) {
-			System.out.println("已经转账");
+			System.out.println("转账成功");
 		}
-		if (toCard.moneyIn(money)) {
-			System.out.println("转账成功！");
-		}
-					
+		toCard.moneyIn(money);				
 	}
 	/**
 	 * 修改密码
@@ -83,7 +80,6 @@ public class Atm {
 			System.out.println("请再次确认新密码:");
 			String pwd2=sc.next();
 			if (pwd1!=null&&pwd1.equals(pwd2)) {
-				
 				currentCard.pwd=pwd2;
 				System.out.println("密码修改成功");
 			}else {
@@ -189,5 +185,7 @@ public class Atm {
 		cardArr[1].cardNo="654321";
 		cardArr[1].pwd="654321";
 		cardArr[1].balance=2000;
+		
+		
 	}
 }

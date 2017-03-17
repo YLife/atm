@@ -10,6 +10,7 @@ public class Card {
 	 * @return boolean
 	 */
 	public boolean moneyIn(double money) {
+		//只能存100元的钞票
 		if (money % 100 != 0.0) {
 			return false;
 		} else {
